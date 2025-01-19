@@ -259,11 +259,12 @@ def main():
         planets_in_houses = {planet: details["house"] for planet, details in planet_positions.items()}
 
         # Display Kundli Report
-        st.subheader("### Kundali Report ###")
-        st.write(f"👤 Name: {name}")
-        st.write(f"📅 Date of Birth: {dob.strftime('%Y-%m-%d')}")
-        st.write(f"🕒 Time of Birth: {tob.strftime('%H:%M:%S')}")
-        st.write(f"📍 Birth Location: {city}, {state} (Lat: {lat}, Lon: {lon})")
+        st.subheader("Kundali Report")
+        st.write(f"👤 **Name:** {name}")
+        st.write(f"📅 **Date of Birth:** {dob.strftime('%Y-%m-%d')}")
+        st.write(f"🕒 **Time of Birth:** {tob.strftime('%H:%M:%S')}")
+        st.write(f"📍 **Birth Location:** {city}, {state} (Lat: {lat}, Lon: {lon})")
+
 
         st.write("\n🌟 All Ascendants (Lagna):")
         for house, asc in ascendants.items():
