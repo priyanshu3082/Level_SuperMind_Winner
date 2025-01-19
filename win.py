@@ -1,3 +1,5 @@
+import os
+from dotenv import OPENCAGE_API_KEY
 import streamlit as st
 import ephem  # for calculating planetary positions
 from opencage.geocoder import OpenCageGeocode  # for getting latitude and longitude
@@ -6,11 +8,11 @@ import matplotlib.pyplot as plt
 from matplotlib.patches import Polygon
 
 # OpenCage API Key (Replace with your key)
-OPENCAGE_API_KEY = "9e148c461c1843ecab4da2b9881e55b2"
+
 
 # Function to get latitude and longitude
 def get_lat_long(city, state):
-    geocoder = OpenCageGeocode(OPENCAGE_API_KEY)
+    geocoder = OpenCageGeocode(os.getenv(OPENCAGE_API_KEY))
     query = f"{city}, {state}"
     results = geocoder.geocode(query)
     
