@@ -6,6 +6,7 @@ from opencage.geocoder import OpenCageGeocode  # for getting latitude and longit
 import datetime
 import matplotlib.pyplot as plt
 from matplotlib.patches import Polygon
+from flask import Flask
 
 # Load environment variables
 load_dotenv()
